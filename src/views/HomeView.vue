@@ -1,16 +1,20 @@
 <template>
-  <div class="home">
-    <h1>Homepage</h1>
-  </div>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur quam necessitatibus, quo nihil libero accusamus accusantium molestias corrupti veritatis culpa quasi autem ipsum perferendis ex ullam ducimus? Suscipit minima voluptatum necessitatibus adipisci ad molestias esse facilis voluptate repellat, cupiditate quia nulla neque laudantium iste? Quae, consequatur corporis. Eaque, magnam aliquid.</p>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur quam necessitatibus, quo nihil libero accusamus accusantium molestias corrupti veritatis culpa quasi autem ipsum perferendis ex ullam ducimus? Suscipit minima voluptatum necessitatibus adipisci ad molestias esse facilis voluptate repellat, cupiditate quia nulla neque laudantium iste? Quae, consequatur corporis. Eaque, magnam aliquid.</p>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur quam necessitatibus, quo nihil libero accusamus accusantium molestias corrupti veritatis culpa quasi autem ipsum perferendis ex ullam ducimus? Suscipit minima voluptatum necessitatibus adipisci ad molestias esse facilis voluptate repellat, cupiditate quia nulla neque laudantium iste? Quae, consequatur corporis. Eaque, magnam aliquid.</p>
+  <Catalogue :title="title" :sectionTitle = "sectionTitle"></Catalogue>
 </template>
 
 <script lang="ts">
+import Catalogue from '@/components/Catalogue.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'HomeView',
+  components:{
+    // eslint-disable-next-line vue/no-unused-components
+    Catalogue
+  },setup(){
+      var title = "Explore Our Products"
+      var sectionTitle = "Our Products"
+      return {title, sectionTitle}
+  }
 });
 </script>

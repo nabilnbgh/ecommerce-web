@@ -1,15 +1,23 @@
 <template>
-  <nav class="flex border-b px-6 pt-6 pb-3 justify-between items-center text-neutral-700 bg-white">
+  <nav class="flex border-b px-6 pt-6 pb-3  justify-between items-center text-neutral-700 bg-white">
     <div class="">
       <a href="#">
         <p class="font-Inter font-bold text-2xl text-black">Exclusive</p>
       </a>
     </div>
     <div class="flex items-center justify-between space-x-10">
-      <a class="active:border-b border-gray-700 font-Poppins text-black text-base" href="#">Home</a>
-      <a class="active:border-b border-gray-700 font-Poppins text-black text-base" href="#">Contact</a>
-      <a class="active:border-b border-gray-700 font-Poppins text-black text-base" href="#">About</a>
-      <a class="active:border-b border-gray-700 font-Poppins text-black text-base" href="#">Login/Sign Up</a>
+      <router-link :to="{name :'home'}">
+        <a class="active:border-b border-gray-700 font-Poppins text-black text-base" >Home</a>
+      </router-link>
+      <router-link :to="{name :'contact'}">
+        <a class="active:border-b border-gray-700 font-Poppins text-black text-base" >Contact</a>
+      </router-link>
+      <router-link :to="{name :'about'}">
+        <a class="active:border-b border-gray-700 font-Poppins text-black text-base" >About</a>
+      </router-link>
+      <router-link :to="{name :'login'}">
+        <a class="active:border-b border-gray-700 font-Poppins text-black text-base">Login</a>
+      </router-link>
     </div>
     <div class="flex  items-center justify-between space-x-8">
       <div class="flex items-center space-x-3">
